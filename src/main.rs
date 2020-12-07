@@ -1,7 +1,6 @@
 use std::io;
 use std::io::prelude::*;
 mod puzzles;
-use puzzles::Puzzle;
 
 fn main() {
     let day = read_day();
