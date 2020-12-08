@@ -1,5 +1,4 @@
 use crate::puzzles::Puzzle;
-extern crate regex;
 use regex::Regex;
 
 struct Day02 { }

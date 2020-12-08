@@ -38,11 +38,11 @@ fn read_day() -> u8 {
 
 fn read_input() -> Vec<String> {
 
-    println!("Write the input to the puzzle. Enter an empty line to end the input");
+    println!("Write the input to the puzzle. Enter a '.' line to end the input");
 
     io::stdin().lock()
         .lines()
         .map(|l| l.unwrap().to_owned())
-        .take_while(|l| l.len() > 0)
+        .take_while(|l| l != ".")
         .collect()
 }
