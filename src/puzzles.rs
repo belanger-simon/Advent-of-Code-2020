@@ -8,11 +8,12 @@ pub trait Puzzle {
     }
 }
 
-pub mod day01;
-pub mod day02;
-pub mod day03;
-pub mod day04;
-pub mod day05;
+mod day01;
+mod day02;
+mod day03;
+mod day04;
+mod day05;
+mod day06;
 
 pub fn get_puzzle(day: u8) -> Option<Box<dyn Puzzle>> {
     match day {
@@ -21,6 +22,7 @@ pub fn get_puzzle(day: u8) -> Option<Box<dyn Puzzle>> {
         3 => Some(Box::new(day03::create())),
         4 => Some(Box::new(day04::create())),
         5 => Some(Box::new(day05::create())),
+        6 => Some(Box::new(day06::create())),
         _ => None
     }
 }

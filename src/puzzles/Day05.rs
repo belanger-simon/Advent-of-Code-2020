@@ -19,19 +19,12 @@ impl Puzzle for Day05 {
         let mut ids : Vec<u32> = input.iter().map(|p| p.row * 8 + p.col).collect();
         ids.sort();
 
-        let mut last = ids.first().unwrap();
-
-        for i in 1..ids.len() {
-            let current = ids.get(i).unwrap();
-
-            if current - last == 2 {
-                return Some((current - 1).to_string());
-            }
-
-            last = current;
-        }
-
-        None
+        ids.iter()
+           .skip(1)
+           .zip(ids.iter())
+           .filter(|(x, y)| *x - *y == 2)
+           .map(|(x,_)| (x - 1).to_string())
+           .next()
     }
 }
 
