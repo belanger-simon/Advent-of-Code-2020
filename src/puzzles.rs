@@ -15,6 +15,7 @@ mod day04;
 mod day05;
 mod day06;
 mod day07;
+mod day08;
 
 pub fn get_puzzle(day: u8) -> Option<Box<dyn Puzzle>> {
     match day {
@@ -25,6 +26,7 @@ pub fn get_puzzle(day: u8) -> Option<Box<dyn Puzzle>> {
         5 => Some(Box::new(day05::create())),
         6 => Some(Box::new(day06::create())),
         7 => Some(Box::new(day07::create())),
+        8 => Some(Box::new(day08::create())),
         _ => None
     }
 }
